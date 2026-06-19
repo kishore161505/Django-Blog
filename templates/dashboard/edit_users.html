@@ -13,6 +13,8 @@
     <!--Right side bar-->
     <div class="col-md-3">
 
+        {% if perms.auth.add_user %}
+
         <h3> Edit User</h3>
 
         <form action = "" method="POST" style="width: 500px;">
@@ -25,6 +27,9 @@
 
         </form>
         <br>
+        {% else %}
+            <h3>You do not have permission to view this page</h3>
+        {% endif %}
     </div>
 
 <div></div>
